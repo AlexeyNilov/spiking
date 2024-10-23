@@ -1,0 +1,5 @@
+daemon_set:
+  telegraf:
+    cpu: 0.1
+    memory: 0.5
+    pods: 1
