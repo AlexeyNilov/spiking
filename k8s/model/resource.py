@@ -2,6 +2,10 @@ from pydantic import BaseModel, PositiveFloat, PositiveInt
 
 
 class Resource(BaseModel):
+    """
+    A model representing a resource requests.
+    """
+
     cpu: PositiveFloat
     memory: PositiveFloat
     pods: PositiveInt

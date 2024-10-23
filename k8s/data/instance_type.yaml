@@ -1,0 +1,9 @@
+EC2:
+  r6i.large:
+    cpu: 2
+    memory: 8
+    pods: 5
+  r6i.xlarge:
+    cpu: 4
+    memory: 16
+    pods: 5

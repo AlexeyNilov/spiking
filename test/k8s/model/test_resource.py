@@ -1,6 +1,6 @@
 import pytest
 from pydantic_core import ValidationError
-from k8s.models.resource import Resource
+from k8s.model.resource import Resource
 
 
 def test_resource_addition():
