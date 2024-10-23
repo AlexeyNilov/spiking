@@ -27,3 +27,6 @@ class Resource(BaseModel):
             memory=max(0, self.memory - other.memory),
             pods=max(0, self.pods - other.pods),
         )
+
+    def __str__(self):
+        return f"Resource(cpu={self.cpu}, memory={self.memory}, pods={self.pods})"

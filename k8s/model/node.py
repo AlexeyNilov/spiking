@@ -11,7 +11,7 @@ class Node(BaseModel):
 
     name: str
     instance_type: str
-    pods: List[Resource] = []
+    pods: List[Resource] = []  # TODO validate available resources
     capacity: Resource
 
     def add_daemon_set(self, daemon_set: dict):
@@ -20,6 +20,12 @@ class Node(BaseModel):
 
     def __str__(self):
         return f"Node(name={self.name}, instance_type={self.instance_type}, capacity={self.capacity})"
+
+    def get_available_resources(self) -> Resource:
+        available_resources = self.capacity
+        for pod in self.pods:
+            available_resources -= pod
+        return available_resources
 
 
 def create_node(name: str, instance_type: str) -> Node:
