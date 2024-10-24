@@ -23,6 +23,8 @@ class Node(BaseModel):
 
     def get_available_resources(self) -> Resource:
         available_resources = self.capacity
+        available_resources.cpu -= 0.08  # Kubelet
+        available_resources.memory -= 1.5  # Kubelet
         for pod in self.pods:
             available_resources -= pod
         return available_resources
