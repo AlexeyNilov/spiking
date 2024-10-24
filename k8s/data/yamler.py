@@ -1,6 +1,10 @@
 from functools import lru_cache
 
 import yaml
+import os
+
+
+daemon_set_path = os.environ.get("DAEMON_SET_PATH", "k8s/data/daemon_set.yaml")
 
 
 @lru_cache
@@ -14,6 +18,6 @@ def load_instance_types() -> dict:
     return data["EC2"]
 
 
-def load_daemon_set(path: str) -> dict:
+def load_daemon_set(path: str = daemon_set_path) -> dict:
     data = load_yaml(file_path=path)
     return data["daemon_set"]

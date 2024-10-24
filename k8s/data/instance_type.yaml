@@ -1,9 +1,29 @@
 EC2:
   r6i.large:
     cpu: 2
-    memory: 8
-    pods: 5
+    memory: 16
+    pods: 20
   r6i.xlarge:
     cpu: 4
-    memory: 16
-    pods: 5
+    memory: 32
+    pods: 44
+  r6a.xlarge:
+    cpu: 4
+    memory: 32
+    pods: 44
+  c5a.xlarge:
+    cpu: 4
+    memory: 8
+    pods: 44
+  m6i.2xlarge:
+    cpu: 8
+    memory: 32
+    pods: 44
+  t4g.medium:
+    cpu: 2
+    memory: 4
+    pods: 12
+  m6a.large:
+    cpu: 2
+    memory: 8
+    pods: 20

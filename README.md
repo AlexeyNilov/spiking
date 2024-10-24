@@ -1,2 +1,2 @@
 # spiking
-Exprerimental stuff
+Experimental stuff

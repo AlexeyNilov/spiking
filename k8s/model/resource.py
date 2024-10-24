@@ -23,8 +23,8 @@ class Resource(BaseModel):
         if not isinstance(other, Resource):
             return NotImplemented
         return Resource(
-            cpu=max(0, self.cpu - other.cpu),
-            memory=max(0, self.memory - other.memory),
+            cpu=round(max(0, self.cpu - other.cpu), 3),
+            memory=round(max(0, self.memory - other.memory), 3),
             pods=max(0, self.pods - other.pods),
         )
 

@@ -12,3 +12,4 @@ conf/settings.py
 .coverage
 coverage.xml
 htmlcov
+rc_ds.yaml
